@@ -93,7 +93,7 @@ def main():
         }
 
     Path("results").mkdir(exist_ok=True)
-    local_path = Path(f"results/score_match_{today}.json")
+    local_path = Path(f"results/score_match_diff_{today}.json")
     with open(local_path, "w") as f:
         json.dump(convert_to_serializable({"run_date": today, "universes": all_results}), f, indent=2)
 
